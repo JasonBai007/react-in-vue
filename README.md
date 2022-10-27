@@ -1,5 +1,7 @@
 # react-in-vue
 
+借助插件`vuera`，实现在`vue`项目中使用`react`组件。
+
 ## Project setup
 
 ```
@@ -20,19 +22,13 @@ npm run build
 
 ### How to use React Components in a Vue project
 
-1. 方案
-
-```
-借助 vuera 插件，让 vue 项目支持 react 组件
-```
-
-2. 安装依赖
+1. 安装 vuera 等依赖
 
 ```sh
 npm i vuera react react-dom @babel/plugin-transform-react-jsx
 ```
 
-3. 配置 babel.config.js，使得可以解析 jsx 文件
+2. 配置 babel.config.js，使得可以解析 jsx 文件
 
 ```js
 module.exports = {
@@ -40,14 +36,14 @@ module.exports = {
 };
 ```
 
-4. 在 main.js 中使用 vuera 插件
+3. 在 main.js 中使用 vuera 插件
 
 ```js
 import { VuePlugin } from "vuera";
 Vue.use(VuePlugin);
 ```
 
-5. 新增 React 组件
+4. 新增 React 组件
 
 ```jsx
 import React from "react";
@@ -61,7 +57,7 @@ class HelloMessage extends React.Component {
 export default HelloMessage;
 ```
 
-6. 引入并使用 react 组件
+5. 引入并使用 react 组件
 
 ```html
 <template>
